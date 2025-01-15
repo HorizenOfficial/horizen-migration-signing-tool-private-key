@@ -21,9 +21,13 @@ import {
 } from "@/app/components/ui/form";
 
 import useSigningForm, { FormValues } from "@/app/hooks/useSigningForm";
+import SignatureDialog from "../molecules/SignatureDialog";
+import { useState } from "react";
 
 function SigningToolWithPrivateKey() {
+  const [showDialogSignature, setShowDialogSignature] = useState(false);
   function onSubmit(values: FormValues) {
+    setShowDialogSignature(true);
     console.log(values);
   }
 
@@ -124,6 +128,12 @@ function SigningToolWithPrivateKey() {
           </form>
         </Form>
       </CardContent>
+
+      <SignatureDialog
+        signature="lorem ipsum dolor sit amet consectetur adipiscing elit"
+        open={showDialogSignature}
+        setOpen={setShowDialogSignature}
+      />
     </Card>
   );
 }
