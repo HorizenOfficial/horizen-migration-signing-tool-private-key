@@ -1,3 +1,4 @@
+import { Button } from "@/app/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +7,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/app/components/ui/dialog";
-import { Button } from "@/app/components/ui/button";
 import { DialogClose } from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { Textarea } from "../ui/textarea";

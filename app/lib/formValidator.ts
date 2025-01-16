@@ -1,8 +1,9 @@
 import { isAddress } from "viem";
 import { z } from "zod";
+import { isValidPrivateKey } from "./privateKeysUtilities";
 
-const privateKeyValidator = z.string().min(1, {
-  message: "Private key must be 64 characters long",
+const privateKeyValidator = z.string().refine(isValidPrivateKey, {
+  message: "Private key is not a valid WIF or hex format",
 });
 
 const destinationAddressValidator = z.string().refine(isAddress, {
@@ -13,8 +14,8 @@ const testnetValidator = z.boolean();
 const compressedValidator = z.boolean();
 
 export {
-  privateKeyValidator,
-  destinationAddressValidator,
-  testnetValidator,
   compressedValidator,
+  destinationAddressValidator,
+  privateKeyValidator,
+  testnetValidator,
 };
