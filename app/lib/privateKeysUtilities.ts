@@ -7,14 +7,10 @@ function isPrivateKeyOnWifFormat(privateKey: string): boolean {
 
     const prefix = Buffer.from(WIFdecoded).toString("hex").slice(0, 2);
 
-    if (
+    return (
       prefix === zencashjs.config.mainnet.wif ||
       prefix === zencashjs.config.testnet.wif
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+    );
   } catch {
     return false;
   }

@@ -50,6 +50,7 @@ function SignatureDialog({
         </div>
         <DialogFooter>
           <Button
+            className="mt-2 md:mt-0"
             disabled={isCopied}
             variant={"outline"}
             onClick={handleCopyToClipboard}

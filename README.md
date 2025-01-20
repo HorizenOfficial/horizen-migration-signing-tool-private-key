@@ -48,11 +48,4 @@ The **Signing Tool with Private Key** is a tool designed to generate cryptograph
    ```
 
 The static files will be available in the out directory.
-
-2. Serve the build. For example:
-
-   ```bash
-   npx serve out
-   ```
-
-Open your browser and navigate to the provided URL to use the tool.
+Open the index.html file in your browser to run the tool.
