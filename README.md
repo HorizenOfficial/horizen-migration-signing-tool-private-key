@@ -8,7 +8,7 @@ The **Signing Tool with Private Key** is a tool designed to generate cryptograph
 
 - **Private Key Input**:
   - Accepts private keys in **WIF format** or **HEX format**.
-  - Allows specifying whether the private key uses the **compressed** or **uncompressed** setting, ensuring compatibility with early ZEN wallets that used uncompressed public keys.
+  - Allows specifying whether the public key uses the **compressed** or **uncompressed** setting, ensuring compatibility with early ZEN wallets that used uncompressed public keys.
 - **Signature Generation**:
   - Inputs: Private key and destination address.
   - Output: A valid signature for the claim message, ready to be used on the claim portal.
