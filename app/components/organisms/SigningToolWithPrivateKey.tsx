@@ -109,7 +109,7 @@ function SigningToolWithPrivateKey() {
                     <FormControl>
                       <Input placeholder="Destination Address..." {...field} />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="max-w-xs" />
                   </FormItem>
                 )}
               />

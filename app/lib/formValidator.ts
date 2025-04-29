@@ -7,7 +7,8 @@ const privateKeyValidator = z.string().refine(isValidPrivateKey, {
 });
 
 const destinationAddressValidator = z.string().refine(isAddress, {
-  message: "Destination address is not a valid ethereum address",
+  message:
+    "Destination address is not a valid EIP-55 formatted Ethereum address",
 });
 
 const testnetValidator = z.boolean();
