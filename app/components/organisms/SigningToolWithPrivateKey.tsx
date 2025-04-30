@@ -40,7 +40,7 @@ function SigningToolWithPrivateKey() {
   const form = useSigningForm();
 
   const { destinationAddress, privateKey, compressed, testnet } = form.watch();
-  const MESSAGE_TO_SIGN = "ZENCLAIM" + destinationAddress;
+  const MESSAGE_TO_SIGN = "ZT1CLAIM" + destinationAddress;
 
   useEffect(() => {
     const isPrivateKeyWif = isPrivateKeyOnWifFormat(privateKey);
