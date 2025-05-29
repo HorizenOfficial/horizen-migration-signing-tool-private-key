@@ -24,7 +24,7 @@ The **Signing Tool with Private Key** is a tool designed to generate cryptograph
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/signing-tool.git
+   git clone https://github.com/HorizenOfficial/horizen-migration-signing-tool-private-key.git
    cd signing-tool
    ```
 
