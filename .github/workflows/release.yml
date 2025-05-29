@@ -35,6 +35,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: signing-tool-private-key.zip
-          repository: HorizenOfficial/signing-tool-private-key
+          repository: HorizenOfficial/horizen-migration-signing-tool-private-key
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
