@@ -36,5 +36,6 @@ jobs:
         with:
           files: signing-tool-private-key.zip
           repository: HorizenOfficial/horizen-migration-signing-tool-private-key
+          body: "For security purposes, run the tool offline. Download and extract the static files from signing-tool-private-key.zip, then open index.html locally."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
