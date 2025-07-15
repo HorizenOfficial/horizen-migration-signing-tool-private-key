@@ -106,6 +106,9 @@ function SigningToolWithPrivateKey() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Destination Address</FormLabel>
+                    <FormDescription>
+                      Destination address is where ZEN will be sent to, make sure you are the owner of this address. Do not use exchange deposit addresses!
+                    </FormDescription>
                     <FormControl>
                       <Input placeholder="Destination Address..." {...field} />
                     </FormControl>
