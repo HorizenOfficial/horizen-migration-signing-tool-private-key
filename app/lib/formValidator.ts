@@ -1,4 +1,4 @@
-import { isAddress } from "viem";
+import { getAddress, isAddress } from "viem";
 import { z } from "zod";
 import { isValidPrivateKey } from "./privateKeysUtilities";
 
@@ -6,9 +6,12 @@ const privateKeyValidator = z.string().refine(isValidPrivateKey, {
   message: "Private key is not a valid WIF or hex format",
 });
 
-const destinationAddressValidator = z.string().refine(isAddress, {
-  message:
-    "Destination address is not a valid EIP-55 formatted Ethereum address",
+const destinationAddressValidator = z.string().refine(  
+  (addr) => {
+  if (!isAddress(addr)) return false;          // basic validation
+  return addr === getAddress(addr);            // checksum validation
+}, {
+  message: "Destination address is not a valid EIP-55 formatted Ethereum address",
 });
 
 const testnetValidator = z.boolean();
